@@ -61,6 +61,7 @@ class AgentDemo:
         print(f"完整的输出为：{all_str}")
 
 
+
 if __name__ == '__main__':
     agent = AgentDemo()
     query = "加菲猫怎么样？"

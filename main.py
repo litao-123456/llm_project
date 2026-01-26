@@ -7,10 +7,13 @@ from api.pydantic_test import BaseModel
 from api.v1_api import router as v1_router
 from api.pydantic_test import router as v2_router
 from api.v3_http import router as v3_router
+from car_agent.car_lang_chain import router as car_agent_router
 app = FastAPI() # 引用实例 是主路由，
 app.include_router(v1_router,prefix="/v1") # router 是局部路由，其他路由，通过挂载到主应用上才能注册访问
 app.include_router(v2_router,prefix="/v2")
 app.include_router(v3_router,prefix="/v3")
+
+app.include_router(car_agent_router,prefix="/car")
 
 
 class Item(BaseModel):

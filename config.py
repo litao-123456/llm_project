@@ -25,7 +25,7 @@ class Settings(BaseSettings):
         return f"mysql+pymysql://{self.MYSQL_USER}:{self.MYSQL_PASSWORD}@{self.MYSQL_HOST}:{self.MYSQL_PORT}/{self.MYSQL_DATABASE}"
 
     class Config:
-        env_file = BASE_DIR / "env" / "dev.env"
+        env_file = BASE_DIR / "env" / ".env-dev"
         env_file_encoding = "utf-8"
 
 settings = Settings()
